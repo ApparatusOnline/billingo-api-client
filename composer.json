@@ -1,5 +1,5 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
+    "name": "ApparatusOnline/billingo-api-client",
     "description": "",
     "keywords": [
         "swagger",
@@ -20,7 +20,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2|~7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
