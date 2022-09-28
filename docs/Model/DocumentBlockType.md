@@ -1,4 +1,4 @@
-# OneOfpartnersBody
+# DocumentBlockType
 
 ## Properties
 Name | Type | Description | Notes

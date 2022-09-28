@@ -64,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **spendingList**
-> \Swagger\Client\Model\SpendingList spendingList($page, $per_page)
+> \Swagger\Client\Model\SpendingList spendingList($q, $page, $per_page, $spending_date, $start_date, $end_date, $payment_status, $spending_type, $categories, $currencies, $payment_methods)
 
 Lists all spending
 
@@ -85,11 +85,20 @@ $apiInstance = new Swagger\Client\Api\SpendingApi(
     new GuzzleHttp\Client(),
     $config
 );
+$q = ""; // string | 
 $page = 1; // int | 
 $per_page = 25; // int | 
+$spending_date = new \Swagger\Client\Model\DateType(); // \Swagger\Client\Model\DateType | 
+$start_date = "start_date_example"; // string | 
+$end_date = "end_date_example"; // string | 
+$payment_status = new \Swagger\Client\Model\PaymentStatusSpending(); // \Swagger\Client\Model\PaymentStatusSpending | 
+$spending_type = new \Swagger\Client\Model\Source(); // \Swagger\Client\Model\Source | 
+$categories = new \Swagger\Client\Model\Category(); // \Swagger\Client\Model\Category | 
+$currencies = new \Swagger\Client\Model\Currency(); // \Swagger\Client\Model\Currency | 
+$payment_methods = new \Swagger\Client\Model\PaymentMethod(); // \Swagger\Client\Model\PaymentMethod | 
 
 try {
-    $result = $apiInstance->spendingList($page, $per_page);
+    $result = $apiInstance->spendingList($q, $page, $per_page, $spending_date, $start_date, $end_date, $payment_status, $spending_type, $categories, $currencies, $payment_methods);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SpendingApi->spendingList: ', $e->getMessage(), PHP_EOL;
@@ -101,8 +110,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **string**|  | [optional]
  **page** | **int**|  | [optional] [default to 1]
  **per_page** | **int**|  | [optional] [default to 25]
+ **spending_date** | [**\Swagger\Client\Model\DateType**](../Model/.md)|  | [optional]
+ **start_date** | **string**|  | [optional]
+ **end_date** | **string**|  | [optional]
+ **payment_status** | [**\Swagger\Client\Model\PaymentStatusSpending**](../Model/.md)|  | [optional]
+ **spending_type** | [**\Swagger\Client\Model\Source**](../Model/.md)|  | [optional]
+ **categories** | [**\Swagger\Client\Model\Category**](../Model/.md)|  | [optional]
+ **currencies** | [**\Swagger\Client\Model\Currency**](../Model/.md)|  | [optional]
+ **payment_methods** | [**\Swagger\Client\Model\PaymentMethod**](../Model/.md)|  | [optional]
 
 ### Return type
 
